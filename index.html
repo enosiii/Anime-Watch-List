@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.5">
+    <link rel="manifest" href="https://enosiii.github.io/PWA/AWL/manifest.json">
+    <title>Anime Watch List 🍿</title>
+</head>
+  
+<body style="margin:0; padding:0; display:flex; justify-content:center; align-items:center; height:100vh;">
+    <iframe src="https://script.google.com/macros/s/AKfycbwpdAJmvep38oEly6CRrLjE7tgO-nbwGyL3yG5HVUjmbUtr7IiwOBTe02n_SJaFVUig/exec"
+            width="100%" height="100%" style="border:none;"></iframe>
+
+    <!-- Add the service worker registration script -->
+  <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('https://enosiii.github.io/PWA/AWL/service-worker.js')
+          .then((registration) => {
+            console.log('Service Worker registered with scope:', registration.scope);
+          })
+          .catch((error) => {
+            console.error('Service Worker registration failed:', error);
+          });
+      }
+    </script>
+  
+</body>
+</html>
